@@ -1,0 +1,15 @@
+{
+  "name": "akz",
+  "version": "0.0.1",
+  "description": "site",
+  "main": "index.php",
+  "authors": [
+    "Andrey Chechkin"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "InlineSVG": "https://github.com/createlogic/InlineSVG.git",
+    "jquery": "~2.1.4",
+    "slick-carousel": "https://github.com/kenwheeler/slick.git#~1.5.2"
+  }
+}
