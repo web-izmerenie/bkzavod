@@ -1,0 +1,102 @@
+@import '../mixins';
+@import '../variables';
+
+.about{
+	.content{
+		text-align: center;
+		color: #445769;
+		font: 400 18px Tahoma;
+		
+		h1{
+			margin-bottom: 40px !important;
+		}
+
+		h1, .pathway{text-align: left;}
+		
+		.preview{
+			width: 800px;
+			margin: 0 auto;
+			line-height: 27px;
+		}//preview
+		
+		#video{
+			margin-bottom: 34px;
+			margin-top: 35px;
+		}
+
+		ul li{
+			list-style: none;
+			font: 400 18px / 24px Tahoma;
+			text-transform: uppercase;
+			margin: 0px auto 23px;
+			width: 860px;
+			padding-left: 17px;
+
+			p{
+				text-transform: none;
+				font: 400 14px / 19px Tahoma;
+				margin-top: 11px;
+			}
+
+			&:before{
+				content: '— ';
+			}
+		}
+
+		#photo{
+			margin-top: 22px;
+			margin-bottom: 33px;
+		}
+	}//content
+	
+	.bottom-block{
+		
+		.adventure{
+			
+			text-align: center;
+			color: #445769;
+			font: 400 18px / 28px Tahoma;
+			
+			h2{
+				color: #c9673d;
+				font:400 44px Tahoma;
+				line-height: 46px;
+				margin-bottom: 16px;
+			}
+			
+			p{
+				width: 580px;
+				margin: 0 auto 34px;
+			}
+			
+		}//adventure
+		
+		.adventureitems{
+			background: #FFF;
+			border-top: 5px solid #c65e32;
+			padding-top: 40px;
+			padding-bottom: 59px;
+			
+			ul{
+				list-style: none;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				
+				li{
+					margin-bottom: 47px;
+					border: 12px solid #f1f0e8;
+					height: 260px;
+					
+					img{border: none;}
+					
+					&:hover{
+						border-color: #4dabfa;
+					}
+				}
+			}
+		}//adventureitems
+		
+	}//bottom-block
+	
+}//about

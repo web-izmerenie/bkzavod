@@ -1,0 +1,96 @@
+@import '../mixins';
+@import '../variables';
+
+.builders{
+	.content{
+		font:400 18px / 28px Tahoma;
+		color: #445769;
+		
+		h1 {margin-bottom: 39px !important; }
+		
+		.text{
+			text-align: center;
+			color: #c9673d;
+			width: 615px;
+			margin: 49px auto 57px;
+			
+			h2{ 
+				font:400 18px / 20px Tahoma;
+				text-transform: uppercase;
+				color: #445769;
+				margin-bottom: 20px;
+			}
+		}//text
+		
+		ul{			
+			list-style: none;
+			margin: 0 auto;
+			vertical-align: top;
+			
+			li{
+				display: inline-block;
+				vertical-align: top;
+				margin-bottom: 40px;
+				margin-left: 32px;
+				
+				img{
+					display: inline-block;
+					vertical-align: top;
+					margin-right: 13px;
+					
+				}//img
+				
+				.text-block{
+					display: inline-block;
+					vertical-align: middle;
+					width: 372px;
+					font: 400 18px / 20px Tahoma;
+					text-transform: uppercase;
+					
+					p{
+						font:400 14px / 20px Tahoma;
+						text-transform: none;
+						margin-top: 11px;
+					}
+				}//text-block
+			}//li
+		}//ul
+		
+		.contacts{
+			text-align: center;
+			margin-top: 34px;
+			margin-bottom: 87px;
+			
+			.img{
+				.bg('call.png', no-repeat center center);
+				display: block;
+				width: 164px;
+				height: 164px;
+				margin: 0 auto;
+				border: none;
+			}//img
+			
+			p{ 
+				color: #c9673d;
+				margin-top: 16px;
+				margin-bottom: 7px;
+			}
+			
+			h2{
+				font:400 43px Tahoma;
+				margin: 0;
+				
+				a{
+					text-decoration: none;
+					color: #445769;
+				}
+			}
+			
+			h3{ 
+				text-transform: uppercase;
+				font: 400 19px Tahoma;
+				margin-top: 18px;
+			}
+		}//contacts
+	}//content
+}//builders

@@ -1,0 +1,37 @@
+.catalog-module ul li{
+	display: inline-block;
+	margin: 21px 29px !important;
+}
+
+.main-bottom ul li{
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 23px !important;
+}
+
+.other-item h1{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.other-item ul{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.about .bottom-block .adventureitems ul li{
+	display: inline-block;
+}
+
+.contacts .content .contact-block .main-adress{
+	display: inline-block;
+}
+
+.contacts .content .contact-block .main-telephone{
+	display: inline-block;
+	padding: 0 65px;
+}
+
+.contacts .content .contact-block .main-representatives{
+	display: inline-block;
+}

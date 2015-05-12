@@ -8,13 +8,13 @@ require($_SERVER[ "DOCUMENT_ROOT"]. "/bitrix/templates/main/header.php"); ?>
 		<a href="/catalog-view.php">Красный цвет</a> <span>/</span>
 		Одинарный гладкий М125
 	</section>
-	<section class="catalog-item">
+	<section class="catalog-item" data-color="#C9673D">
 		<section id="main-title" class="cell">
-			<h1>Кирпич М125 <span class="top"></span></h1>
+			<h1>Кирпич М125</h1><span class="top"></span>
 			<ul>
-				<li>красный</li>
-				<li>одинарный</li>
-				<li>гладкий</li>
+				<li style="color:#C9673D;">красный</li>
+				<li style="color:#C9673D;">одинарный</li>
+				<li style="color:#C9673D;">гладкий</li>
 			</ul>
 		</section>
 		<img class="cell" src="/upload/item.png"> 

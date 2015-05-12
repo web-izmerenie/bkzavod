@@ -1,6 +1,12 @@
 			</main><!-- .content -->
+			<?if(defined('ABOUT')){?>
+				<section class="bottom-block">
+					<?require($_SERVER["DOCUMENT_ROOT"]."/inc/adventure.php")?>
+				</section>
+			<?}?>
 			<?if(defined('bottom-module')){?>
 				<section class="bottom-block">
+					<?require($_SERVER["DOCUMENT_ROOT"]."/inc/other_item.php")?>
 					<?require($_SERVER["DOCUMENT_ROOT"]."/inc/catalog.php")?>
 				</section>
 			<?}?>

@@ -1,0 +1,145 @@
+@import '../mixins';
+@import '../variables';
+
+.contacts{
+	.content{
+		
+		h1{margin-bottom: 22px !important;}
+		
+		color: #445769;
+		font: 400 14px Tahoma;
+
+		.contact-block{
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+
+			.main-adress{
+				width: 277px;
+				line-height: 24px;
+				padding-left: 5px;
+
+				h2{
+					color: #c65e32;
+					font:400 18px / 30px Tahoma;
+					text-transform: uppercase;
+					margin-bottom: 4px;
+				}
+			}//main-adress
+
+			.main-telephone{
+
+				ul{
+					margin-top: -2px;
+
+					li{
+						list-style: none;
+						line-height: 36px;
+
+						a{
+							color: #445769;
+						}
+					}
+				}
+			}//main-telephone
+
+			.main-representatives{
+				padding-bottom: 13px;
+				a{
+					color: #4dabfa;
+					font: 400 18px / 24px Tahoma;
+				}
+			}
+
+		}//contact-block
+
+		.map{
+			.bg('map.jpg', no-repeat 0 0);
+			width: 100;
+			height: 764px;
+			max-width: 1255px;
+			margin: 35px auto 25px;
+		}//map
+
+		.representatives{
+			margin-bottom: 110px;
+			h2{
+				margin: 0 0 51px 0;
+				color: #445769;
+				font: 400 44px / 28px Tahoma;
+				text-align: center;
+			}
+			
+			.inside{
+				border-left: 7px solid #c65e32;
+				border-right: 7px solid #c65e32;
+			}
+			
+			.icon{
+				border: none;
+				&:hover{
+					border: none;
+				}
+			}//icon
+			
+			ul{
+				font:400 18px / 30px Tahoma;
+				
+				
+				&:hover{
+					font-weight: 800;
+					
+					li:first-child{font-weight: 800;}
+					border-bottom: 1px solid #b4c3cf;
+				}
+				
+				li{
+					display: inline-block;
+					vertical-align: middle;
+					text-align: center;
+					color: #445769;
+					cursor: default;
+
+					&:first-child{
+						color: #c65e32;
+						font: 400 24px/49px Tahoma;
+						width: 330px;
+					}
+					
+					&:nth-child(2){
+						width: 303px;
+					}
+					
+					&:last-child{
+						width: 251px;
+					}
+
+				}
+			}
+
+			#pointing{
+				.bg('pointing.png', no-repeat center center);
+				height: 41px;
+				margin-bottom: 18px;
+				vertical-align: top;
+			}
+
+			#adres{
+				.bg('home.png', no-repeat center center);
+				height: 38px;
+				width: 283px;
+				vertical-align: top;
+			}
+
+			#tel{
+				.bg('tel.png', no-repeat center center);
+				height: 42px;
+				vertical-align: top;
+				width: 308px;
+			}
+
+		}//representatives
+		
+	}//main
+	
+}//contacts

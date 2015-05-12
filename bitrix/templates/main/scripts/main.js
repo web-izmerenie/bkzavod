@@ -11,5 +11,9 @@ $(document).ready(function(){
 		autoplay: true,
 	});
 
-	$('.svg').inlineSVG();
+	$('.svg').inlineSVG({
+	  eachAfter: function () {
+        $(this).find('path').removeAttr('fill');
+      }
+	});
 });
