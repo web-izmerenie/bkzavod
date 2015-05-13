@@ -22,10 +22,11 @@ $tplPath = "/bitrix/templates/main/";?>
 	<meta charset="utf-8" />
 	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<!--[if gte IE 9]><link href="<?=$tplPath?>styles/src/ie.css" rel="stylesheet"><![endif]-->
-	<title>АКЗ</title>
+	<title><?$APPLICATION->ShowTitle()?></title>
 	<link rel="shortcut icon" href="<?=$tplPath;?>/images/favicon.ico" type="image/x-icon" />
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
+	<?$APPLICATION->ShowMeta("keywords")?>
+	<?$APPLICATION->ShowMeta("description")?>
+	<?$APPLICATION->ShowCSS();?>
 	<link href="/bower_components/slick-carousel/slick/slick-theme.css" rel="stylesheet">
 	<link href="/bower_components/slick-carousel/slick/slick.css" rel="stylesheet">
 	<link href="<?=$tplPath;?>styles/build/build.css" rel="stylesheet">
@@ -36,7 +37,7 @@ $tplPath = "/bitrix/templates/main/";?>
 </head>
 
 <body>
-
+<?$APPLICATION->ShowPanel();?>
 <div class="wrapper">
 
 	<header class="header">
