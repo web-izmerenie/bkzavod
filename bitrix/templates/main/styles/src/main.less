@@ -204,9 +204,13 @@ html {
                     }
 
                     .active {
-                        &:before, &:after { content: ''; }
+                        &:before{ content: ''; }
+						
+						&:last-child:after { content: ''; }
 
                         background: #C9673D;
+						position: relative;
+						left: 10px;
                     }
                     //active
                 }

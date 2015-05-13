@@ -22,11 +22,11 @@ $tplPath = "/bitrix/templates/main/";?>
 	<meta charset="utf-8" />
 	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<!--[if gte IE 9]><link href="<?=$tplPath?>styles/src/ie.css" rel="stylesheet"><![endif]-->
-	<title><?$APPLICATION->ShowTitle()?></title>
+	<title><?$APPLICATION->ShowTitle();?></title>
 	<link rel="shortcut icon" href="<?=$tplPath;?>/images/favicon.ico" type="image/x-icon" />
-	<?$APPLICATION->ShowMeta("keywords")?>
-	<?$APPLICATION->ShowMeta("description")?>
-	<?$APPLICATION->ShowCSS();?>
+	<?$APPLICATION->ShowMeta("keywords");?>
+	<?$APPLICATION->ShowMeta("description");?>
+	<?$APPLICATION->ShowHead();?>
 	<link href="/bower_components/slick-carousel/slick/slick-theme.css" rel="stylesheet">
 	<link href="/bower_components/slick-carousel/slick/slick.css" rel="stylesheet">
 	<link href="<?=$tplPath;?>styles/build/build.css" rel="stylesheet">
@@ -41,18 +41,24 @@ $tplPath = "/bitrix/templates/main/";?>
 <div class="wrapper">
 
 	<header class="header">
-		<section class="mainmenu">
-			<div class="content-block">
-				<nav>
-					<ul>
-						<li><a href="/about.php">О заводе</a></li>
-						<li><a href="/catalog.php">Продукция</a></li>
-						<li><a href="/for_builders.php">Для строителей</a></li>
-						<li><a href="/contacts.php">Контакты</a></li>
-					</ul>
-				</nav>
-			</div>
-		</section>
+		<?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"main_menu", 
+	array(
+		"ROOT_MENU_TYPE" => "top",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MAX_LEVEL" => "1",
+		"CHILD_MENU_TYPE" => "",
+		"USE_EXT" => "N",
+		"DELAY" => "N",
+		"ALLOW_MULTI_SELECT" => "N"
+	),
+	false
+);?>
 		<section class="main">
 			<div class="content-block">
 				<?if($_SERVER['REQUEST_URI'] == '/'){?>
