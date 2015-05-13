@@ -32,7 +32,7 @@ $tplPath = "/bitrix/templates/main/";?>
 	<link href="<?=$tplPath;?>styles/build/build.css" rel="stylesheet">
 	<script src="/bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="/bower_components/slick-carousel/slick/slick.min.js"></script>
-	<script src="<?=$tplPath;?>scripts/libs/InlineSVG/jquery.inlinesvg.js"></script>
+	<script src="/bower_components/InlineSVG/jquery.inlinesvg.js"></script>
 	<script src="<?=$tplPath;?>scripts/main.js"></script>
 </head>
 
