@@ -1,3 +1,4 @@
+				<?if(!defined('NO_CONTENT_BLOCK')){?></section><?}?>
 			</main><!-- .content -->
 			<?if(defined('ABOUT')){?>
 				<section class="bottom-block">
