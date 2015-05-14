@@ -2,9 +2,9 @@
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetTitle("Главная");
 ?><?$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"slider", 
-	array(
+	"bitrix:news.list",
+	"slider",
+	Array(
 		"IBLOCK_TYPE" => "content",
 		"IBLOCK_ID" => "1",
 		"NEWS_COUNT" => "10",
@@ -13,16 +13,8 @@ $APPLICATION->SetTitle("Главная");
 		"SORT_BY2" => "ACTIVE_FROM",
 		"SORT_ORDER2" => "DESC",
 		"FILTER_NAME" => "",
-		"FIELD_CODE" => array(
-			0 => "DETAIL_PICTURE",
-			1 => "undefined",
-			2 => "",
-		),
-		"PROPERTY_CODE" => array(
-			0 => "",
-			1 => "undefined",
-			2 => "",
-		),
+		"FIELD_CODE" => array(0=>"DETAIL_PICTURE",1=>"undefined",2=>"",),
+		"PROPERTY_CODE" => array(0=>"",1=>"undefined",2=>"",),
 		"CHECK_DATES" => "Y",
 		"DETAIL_URL" => "",
 		"AJAX_MODE" => "N",
@@ -59,8 +51,38 @@ $APPLICATION->SetTitle("Главная");
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
 		"PAGER_SHOW_ALL" => "N",
 		"AJAX_OPTION_ADDITIONAL" => ""
+	)
+);?><?$APPLICATION->IncludeComponent(
+	"bitrix:catalog.section.list", 
+	"module_sections", 
+	array(
+		"IBLOCK_TYPE" => "catalog",
+		"IBLOCK_ID" => "2",
+		"SECTION_ID" => "",
+		"SECTION_CODE" => $_REQUEST["SECTION_CODE"],
+		"COUNT_ELEMENTS" => "N",
+		"TOP_DEPTH" => "2",
+		"SECTION_FIELDS" => array(
+			0 => "",
+			1 => "undefined",
+			2 => "",
+		),
+		"SECTION_USER_FIELDS" => array(
+			0 => "UF_COLOR",
+			1 => "UF_TOP",
+			2 => "UF_COLOR_NAME",
+			3 => "undefined",
+			4 => "",
+		),
+		"VIEW_MODE" => "LIST",
+		"SHOW_PARENT_NAME" => "Y",
+		"SECTION_URL" => "",
+		"CACHE_TYPE" => "A",
+		"CACHE_TIME" => "36000000",
+		"CACHE_GROUPS" => "Y",
+		"ADD_SECTIONS_CHAIN" => "Y"
 	),
 	false
-);?><br><?
+);?><?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');
 ?>
