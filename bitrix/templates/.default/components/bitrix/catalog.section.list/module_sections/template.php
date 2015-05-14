@@ -17,7 +17,7 @@ $this->setFrameMode(true);?>
 		<ul>
 			<?foreach($arResult['SECTIONS'] as $arItem){?>
 				<li>
-					<a href="#" style="color:<?=$arItem['UF_COLOR'];?>">
+					<a href="<?=$arItem['SECTION_PAGE_URL'];?>" style="color:<?=$arItem['UF_COLOR'];?>">
 						<div class="hover-block">
 							<div class="color-block" style="background:<?=$arItem['UF_COLOR'];?>;"></div>
 						</div>

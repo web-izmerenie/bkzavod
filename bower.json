@@ -10,6 +10,6 @@
   "dependencies": {
     "jquery": "~2.1.4",
     "slick-carousel": "https://github.com/kenwheeler/slick.git#~1.5.2",
-	"jquery.inlineSVG": "1.1.0"
+	"jquery.inlineSVG": "latest"
   }
 }
