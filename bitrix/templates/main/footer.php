@@ -1,16 +1,16 @@
 				<?if(!defined('NO_CONTENT_BLOCK')){?></section><?}?>
 			</main><!-- .content -->
-			<?if(defined('ABOUT')){?>
-				<section class="bottom-block">
-					<?require($_SERVER["DOCUMENT_ROOT"]."/inc/adventure.php")?>
-				</section>
-			<?}?>
-			<?if(defined('bottom-module')){?>
-				<section class="bottom-block">
-					<?require($_SERVER["DOCUMENT_ROOT"]."/inc/other_item.php")?>
-					<?require($_SERVER["DOCUMENT_ROOT"]."/inc/catalog.php")?>
-				</section>
-			<?}?>
+			<section class="bottom-block">
+				<?$APPLICATION->IncludeComponent(
+					"bitrix:main.include",
+					"",
+					Array(
+						"AREA_FILE_SHOW" => "page",
+						"AREA_FILE_SUFFIX" => "inc",
+						"EDIT_TEMPLATE" => ""
+					)
+				);?>
+			</section>
 		</div><!-- .wrapper -->
 		
 		<footer class="footer <?if($_SERVER['REQUEST_URI'] != '/'){?>footer-inside<?}?>">

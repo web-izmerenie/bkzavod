@@ -12,6 +12,8 @@ if(defined('ABOUT'))
 	$html_classes = array('about');
 if(defined('BUILDERS'))
 	$html_classes = array('builders');
+if(defined('CATALOG_VIEW'))
+	$main_classes = array('catalog-view');
 
 $html_classes = implode(" ", $html_classes);
 $main_classes = implode(" ", $main_classes);
@@ -42,8 +44,8 @@ $tplPath = "/bitrix/templates/main/";?>
 
 	<header class="header">
 		<?$APPLICATION->IncludeComponent(
-	"bitrix:menu", 
-	"main_menu", 
+	"bitrix:menu",
+	"main_menu",
 	array(
 		"ROOT_MENU_TYPE" => "top",
 		"MENU_CACHE_TYPE" => "N",
@@ -74,7 +76,7 @@ $tplPath = "/bitrix/templates/main/";?>
 		</section>
 	</header><!-- .header-->
 
-	<main class="content">
+	<main class="content <?=$main_classes;?>">
 		<?if(!defined('NO_CONTENT_BLOCK')){?>
 			<section class="content-block">
 			<?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "pathway", Array(
@@ -84,5 +86,5 @@ $tplPath = "/bitrix/templates/main/";?>
 	),
 	false
 );?>
-			<h1><?$APPLICATION->ShowTitle(false);?></h1>
+				<h1><?$APPLICATION->ShowTitle(false);?><?$APPLICATION->ShowViewContent('top');?></h1>
 		<?}?>

@@ -11,9 +11,9 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);?>
-<?if(!empty($arResult['SECTIONS'])){?>
+<?if(!empty($arResult['SECTIONS']) && !isset($_GET['SECTION_CODE'])){?>
 	<section class="main-catalog">
-		<p>Выберите интересующий Вас 
+		<p>Выберите интересующий Вас
 		цвет кирпича:</p>
 		<ul>
 			<?foreach($arResult['SECTIONS'] as $arItem){?>
