@@ -2,7 +2,7 @@
 
 if(CModule::IncludeModule("iblock"))
 {
-	$arFilter = Array("IBLOCK_ID"=>2, "ID"=>1);
+	$arFilter = Array("IBLOCK_ID"=>$arResult['IBLOCK_ID'], "ID"=>$arResult['IBLOCK_SECTION_ID']);
 	$rsSections = CIBlockSection::GetList(Array("SORT"=>"ASC"), $arFilter, false, $arSelect = array("UF_*"));
 	while($arSection = $rsSections->GetNext())
 	{
@@ -19,5 +19,9 @@ foreach($arResult["PROPERTIES"]["ATT_PORTFOLIO"]["VALUE"] as $portfolio){
 }
 
 $APPLICATION->AddChainItem($arResult['SECTION']['NAME'], $arResult['SECTION']['SECTION_PAGE_URL']);
+
+$GLOBALS['SECTION'] = $arResult["SECTION"];
+
+$GLOBALS['ITEM_ID'] = $arResult['ID'];
 
 unset($arResult['SECTION']);
