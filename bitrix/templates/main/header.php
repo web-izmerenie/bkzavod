@@ -31,8 +31,11 @@ $tplPath = "/bitrix/templates/main/";?>
 	<?$APPLICATION->ShowHead();?>
 	<link href="/bower_components/slick-carousel/slick/slick-theme.css" rel="stylesheet">
 	<link href="/bower_components/slick-carousel/slick/slick.css" rel="stylesheet">
+	<link href="/bower_components/fancybox/source/jquery.fancybox.css" rel="stylesheet">
 	<link href="<?=$tplPath;?>styles/build/build.css" rel="stylesheet">
 	<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="/bower_components/jquery-color/jquery.color.js"></script>
+	<script src="/bower_components/fancybox/source/jquery.fancybox.pack.js"></script>
 	<script src="/bower_components/slick-carousel/slick/slick.min.js"></script>
 	<script src="/bower_components/InlineSVG/jquery.inlinesvg.js"></script>
 	<script src="<?=$tplPath;?>scripts/main.js"></script>
@@ -77,16 +80,21 @@ $tplPath = "/bitrix/templates/main/";?>
 	</header><!-- .header-->
 
 	<main class="content <?=$main_classes;?>">
-		<?if(!defined('NO_CONTENT_BLOCK')){?>
-			<section class="content-block">
-			<?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "pathway", Array(
-	"START_FROM" => "0",	// Номер пункта, начиная с которого будет построена навигационная цепочка
-		"PATH" => "",	// Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
-		"SITE_ID" => "-",	// Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
-	),
-	false
-		);?>		
-			<?if(!defined('NO_TITLE')){?>
-				<h1><?$APPLICATION->ShowTitle(false);?><?$APPLICATION->ShowViewContent('top');?></h1>
+		<?if(!defined('MAIN_PAGE')){?>
+			<?if(!defined('NO_CONTENT_BLOCK')){?>
+				<section class="content-block">
 			<?}?>
+				<div class="content-block" style="padding:0;">	
+					<?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "pathway", Array(
+			"START_FROM" => "0",	// Номер пункта, начиная с которого будет построена навигационная цепочка
+				"PATH" => "",	// Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
+				"SITE_ID" => "-",	// Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
+			),
+			false
+				);?>		
+					<?if(!defined('NO_TITLE')){?>
+						<h1><?$APPLICATION->ShowTitle(false);?><?$APPLICATION->ShowViewContent('top');?></h1>
+					<?}?>
+				</div>
 		<?}?>
+		

@@ -17,11 +17,11 @@ $this->setFrameMode(true);?>
 			<span class="top"></span>
 		<?}?>
 	<?$this->EndViewTarget();?>
-	<ul>
+	<ul class="color" data-color="<?=$arResult['UF_COLOR'];?>">
 		<?foreach($arResult['ITEMS'] as $arItem){?>
 		<?$photo = CFile::ResizeImageGet($arItem['DETAIL_PICTURE'], array('width'=>143, 'height'=>80), BX_RESIZE_IMAGE_PROPORTIONAL, true);?>
 			<li>
-				<a href="<?=$arItem['DETAIL_PAGE_URL'];?>">
+				<a style="color:<?=$arResult['UF_COLOR'];?>" href="<?=$arItem['DETAIL_PAGE_URL'];?>">
 					<img src="<?=$photo['src'];?>">
 					<?=$arItem['NAME'];?>
 				</a>

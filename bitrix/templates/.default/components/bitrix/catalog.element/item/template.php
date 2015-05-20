@@ -18,7 +18,7 @@ $this->setFrameMode(true);?>
 		<?}?>
 	<?$this->EndViewTarget();?>
 	<?$photo = CFile::ResizeImageGet($arResult['DETAIL_PICTURE'], array('width'=>550, 'height'=>275), BX_RESIZE_IMAGE_PROPORTIONAL, true);?>
-	<section class="catalog-item" data-color="<?=$arResult['COLOR'];?>">
+	<section class="catalog-item color" data-color="<?=$arResult['COLOR'];?>">
 		<section id="main-title" class="cell">
 			<h1>Кирпич <?=$arResult['PROPERTIES']['PROP_MARK']['VALUE'];?></h1>
 			<?if($arResult['PROPERTIES']['ATT_TOP']['VALUE'] == 1){?>
