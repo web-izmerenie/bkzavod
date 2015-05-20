@@ -1,8 +1,8 @@
 <?
 $arUrlRewrite = array(
 	array(
-		"CONDITION" => "#^/produktsiya/(.+?)/(.+?).html(\\\\?|\\\$)#",
-		"RULE" => "ELEMENT_CODE=\\\$2&",
+		"CONDITION" => "#^/produktsiya/(.+?)/(.+?).html(\\?|\$)#",
+		"RULE" => "ELEMENT_CODE=\$2&",
 		"ID" => "",
 		"PATH" => "/produktsiya/detail.php",
 	),

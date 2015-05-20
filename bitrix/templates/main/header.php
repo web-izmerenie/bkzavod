@@ -85,6 +85,8 @@ $tplPath = "/bitrix/templates/main/";?>
 		"SITE_ID" => "-",	// Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
 	),
 	false
-);?>
+		);?>		
+			<?if(!defined('NO_TITLE')){?>
 				<h1><?$APPLICATION->ShowTitle(false);?><?$APPLICATION->ShowViewContent('top');?></h1>
+			<?}?>
 		<?}?>
