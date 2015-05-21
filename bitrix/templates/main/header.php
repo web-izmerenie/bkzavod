@@ -38,6 +38,7 @@ $tplPath = "/bitrix/templates/main/";?>
 	<script src="/bower_components/fancybox/source/jquery.fancybox.pack.js"></script>
 	<script src="/bower_components/slick-carousel/slick/slick.min.js"></script>
 	<script src="/bower_components/InlineSVG/jquery.inlinesvg.js"></script>
+	<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 	<script src="<?=$tplPath;?>scripts/main.js"></script>
 </head>
 

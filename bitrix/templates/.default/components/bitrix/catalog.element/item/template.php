@@ -58,7 +58,7 @@ $this->setFrameMode(true);?>
 				<span><?=$arResult['DETAIL_TEXT'];?>
 					<div class="fadeout"></div>
 				</span>
-				<a href="#">Читать еще</a>
+				<a href="#add">Читать еще</a>
 			</div>
 				<ul class="adventure">
 					<li style="fill:<?=$arResult['COLOR'];?>"><img class="svg" src="/bitrix/templates/main/images/gost.svg"><span>Производство соответствует ГОСТу 530-2012;</span></li>
