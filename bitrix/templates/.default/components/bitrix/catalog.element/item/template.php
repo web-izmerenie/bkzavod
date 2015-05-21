@@ -74,7 +74,7 @@ $this->setFrameMode(true);?>
 				<ul>
 					<?foreach($arResult['PORTFOLIO'] as $portfolio){?>
 						<?$rPhoto = CFile::ResizeImageGet($portfolio, array('width'=>1024, 'height'=>768), BX_RESIZE_IMAGE_PROPORTIONAL, true);?>
-						<li><a href="<?=$rPhoto['src'];?>"><img src="<?=$rPhoto['src'];?>"></a></li>
+						<li><a class="module" rel="gallery" href="<?=$rPhoto['src'];?>"><img src="<?=$rPhoto['src'];?>"></a></li>
 					<?}?>
 				</ul>
 			</div>

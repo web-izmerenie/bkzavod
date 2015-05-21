@@ -41,6 +41,6 @@ $APPLICATION->SetTitle("Для строителей");
     <div class="contacts">
         <a class="img" href="tel:8(86350)4-44-48"></a>
         <p>Узнать подробности и уточнить условия можно по телефону:</p>
-        <h2><a href="tel:8 (86350) 4-44-48">8 (86350) 4-44-48</a></h2>
+        <h2><a href="tel:+7 (86350) 48-8-48">+7 (86350) 4-44-48</a></h2>
         <h3>Звоните прямо сейчас!</h3>
-    </div><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+    </div><br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

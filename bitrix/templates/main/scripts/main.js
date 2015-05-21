@@ -84,7 +84,7 @@ $(document).ready(function(){
       }
 	});
 	
-	$(".portfolio ul li a").fancybox({
+	$(".module").fancybox({
 		padding : 0,
 			helpers: {
 				overlay: {
