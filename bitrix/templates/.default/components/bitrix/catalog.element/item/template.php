@@ -17,7 +17,7 @@ $this->setFrameMode(true);?>
 			<span class="top"></span>
 		<?}?>
 	<?$this->EndViewTarget();?>
-	<?$photo = CFile::ResizeImageGet($arResult['DETAIL_PICTURE'], array('width'=>550, 'height'=>275), BX_RESIZE_IMAGE_PROPORTIONAL, true);?>
+	<?$photo = CFile::ResizeImageGet($arResult['DETAIL_PICTURE'], array('width'=>580, 'height'=>288), BX_RESIZE_IMAGE_PROPORTIONAL, true);?>
 	<section class="catalog-item color" data-color="<?=$arResult['COLOR'];?>">
 		<section id="main-title" class="cell">
 			<h1>Кирпич <?=$arResult['PROPERTIES']['PROP_MARK']['VALUE'];?></h1>
@@ -48,7 +48,7 @@ $this->setFrameMode(true);?>
 				</ul>
 				<ul class="other-charset">
 					<li><?=$arResult['PROPERTIES']['OTHER_COLD']['NAME']?> - <?=$arResult['PROPERTIES']['OTHER_COLD']['VALUE']?> циклов</li>
-					<li><?=$arResult['PROPERTIES']['OTHER_TEPLO']['NAME']?> - <?=$arResult['PROPERTIES']['OTHER_TEPLO']['VALUE']?> Вт/мºС</li>
+					<li><?=$arResult['PROPERTIES']['OTHER_TEPLO']['NAME']?> - <?=$arResult['PROPERTIES']['OTHER_TEPLO']['VALUE']?> Вт/мС</li>
 					<li><?=$arResult['PROPERTIES']['OTHER_RADIONUK']['NAME']?> - <?=$arResult['PROPERTIES']['OTHER_RADIONUK']['VALUE']?> Бк/кг</li>
 				</ul>
 		</section>

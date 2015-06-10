@@ -1,12 +1,16 @@
 <?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.section",
-	"bottom_subitem",
-	Array(
+	"bitrix:catalog.section", 
+	"bottom_subitem", 
+	array(
 		"IBLOCK_TYPE" => "catalog",
 		"IBLOCK_ID" => "2",
 		"SECTION_ID" => $GLOBALS["SECTION"]["ID"],
 		"SECTION_CODE" => $_REQUEST["SECTION_CODE"],
-		"SECTION_USER_FIELDS" => array(0=>"UF_COLOR",1=>"undefined",2=>"",),
+		"SECTION_USER_FIELDS" => array(
+			0 => "UF_COLOR",
+			1 => "undefined",
+			2 => "",
+		),
 		"ELEMENT_SORT_FIELD" => "sort",
 		"ELEMENT_SORT_ORDER" => "asc",
 		"ELEMENT_SORT_FIELD2" => "id",
@@ -14,9 +18,13 @@
 		"FILTER_NAME" => "arrFilter",
 		"INCLUDE_SUBSECTIONS" => "A",
 		"SHOW_ALL_WO_SECTION" => "Y",
-		"PAGE_ELEMENT_COUNT" => "3",
-		"LINE_ELEMENT_COUNT" => "3",
-		"PROPERTY_CODE" => array(0=>"",1=>"undefined",2=>"",),
+		"PAGE_ELEMENT_COUNT" => "20",
+		"LINE_ELEMENT_COUNT" => "2",
+		"PROPERTY_CODE" => array(
+			0 => "",
+			1 => "undefined",
+			2 => "",
+		),
 		"OFFERS_LIMIT" => "5",
 		"TEMPLATE_THEME" => "blue",
 		"MESS_BTN_BUY" => "Купить",
@@ -46,7 +54,8 @@
 		"CACHE_FILTER" => "N",
 		"ACTION_VARIABLE" => "action",
 		"PRODUCT_ID_VARIABLE" => "id",
-		"PRICE_CODE" => array(),
+		"PRICE_CODE" => array(
+		),
 		"USE_PRICE_COUNT" => "N",
 		"SHOW_PRICE_COUNT" => "1",
 		"PRICE_VAT_INCLUDE" => "Y",
@@ -55,7 +64,8 @@
 		"ADD_PROPERTIES_TO_BASKET" => "Y",
 		"PRODUCT_PROPS_VARIABLE" => "prop",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
-		"PRODUCT_PROPERTIES" => array(),
+		"PRODUCT_PROPERTIES" => array(
+		),
 		"DISPLAY_COMPARE" => "N",
 		"PAGER_TEMPLATE" => ".default",
 		"DISPLAY_TOP_PAGER" => "N",
@@ -70,6 +80,7 @@
 		"LABEL_PROP" => "-",
 		"AJAX_OPTION_ADDITIONAL" => "",
 		"PRODUCT_QUANTITY_VARIABLE" => "quantity"
-	)
+	),
+	false
 );?>
 <?require($_SERVER['DOCUMENT_ROOT'].'/inc/module_catalog.php');?>

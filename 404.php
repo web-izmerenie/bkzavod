@@ -14,7 +14,7 @@ $APPLICATION->SetTitle("404 Not Found");?>
 	<h1>Такой страницы больше нет</h1>
 	<p>Приносим свои извинения</p>
 	<ul>
-		<li><a href="#back" onclick="history.back();"><div id="back" class="circle"></div>Назад</a></li>
+		<li><a onclick="history.back();"><div id="back" class="circle"></div>Назад</a></li>
 		<li><img src="<?=$tplPath;?>images/404-img.png"></li>
 		<li><a href="/"><div id="main-page" class="circle"></div>На главную</a></li>
 	</ul>

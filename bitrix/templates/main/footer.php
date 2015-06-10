@@ -15,7 +15,7 @@
 		
 		<footer class="footer <?if($_SERVER['REQUEST_URI'] != '/'){?>footer-inside<?}?>">
 			<section class="content-block">
-				<span>Аксайский кирпичный завод  2015 г.</span>
+				<span>АКСАЙСКИЙ КИРПИЧНЫЙ ЗАВОД  2015 г.</span>
 				<a href="http://web-izmerenie.ru/"><span>Сделано в</span> <img class="svg" src="<?=$tplPath;?>images/wi.svg"></a>
 			</section>
 		</footer><!-- .footer -->
