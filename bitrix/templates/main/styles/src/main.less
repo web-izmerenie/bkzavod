@@ -133,6 +133,7 @@ html {
 					display: flex;
 					justify-content: flex-start;
 					height: @height;
+					align-items: center;
 
 					h1 {
 						color: #f3f4ed;
@@ -177,13 +178,14 @@ html {
 					background: #445769;
 					height: @height;
 					width: 100%;
-					line-height: @height;
+					//line-height: @height;
 					margin: 0 auto;
 
 					ul li {
-						font: 400 15px/43px Tahoma, Geneva;
+						font: 400 15px Tahoma, Geneva;
 						color: #7a7f95;
 						display: inline-block;
+						height: 43px;
 
 						&:before { content: '|'; }
 
@@ -199,6 +201,7 @@ html {
 							text-transform: uppercase;
 							text-decoration: none;
 							padding: 0 43px;
+							line-height: 43px;
 
 							&:hover { color: #C9673D; }
 						}
