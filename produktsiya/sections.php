@@ -13,8 +13,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");?>
 			0 => "UF_COLOR",
 			1 => "UF_TOP",
 			2 => "UF_COLOR_NAME",
-			3 => "undefined",
-			4 => "",
+			3 => "",
 		),
 		"ELEMENT_SORT_FIELD" => "sort",
 		"ELEMENT_SORT_ORDER" => "asc",
@@ -23,12 +22,11 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");?>
 		"FILTER_NAME" => "arrFilter",
 		"INCLUDE_SUBSECTIONS" => "A",
 		"SHOW_ALL_WO_SECTION" => "N",
-		"PAGE_ELEMENT_COUNT" => "30",
+		"PAGE_ELEMENT_COUNT" => "50",
 		"LINE_ELEMENT_COUNT" => "3",
 		"PROPERTY_CODE" => array(
 			0 => "",
-			1 => "undefined",
-			2 => "",
+			1 => "",
 		),
 		"OFFERS_LIMIT" => "5",
 		"TEMPLATE_THEME" => "blue",
@@ -84,7 +82,15 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");?>
 		"ADD_PICT_PROP" => "-",
 		"LABEL_PROP" => "-",
 		"AJAX_OPTION_ADDITIONAL" => "",
-		"PRODUCT_QUANTITY_VARIABLE" => "quantity"
+		"PRODUCT_QUANTITY_VARIABLE" => "quantity",
+		"COMPONENT_TEMPLATE" => "elements",
+		"BACKGROUND_IMAGE" => "-",
+		"SEF_MODE" => "N",
+		"SET_LAST_MODIFIED" => "N",
+		"USE_MAIN_ELEMENT_SECTION" => "N",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"SHOW_404" => "N",
+		"MESSAGE_404" => ""
 	),
 	false
 );?>

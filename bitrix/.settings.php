@@ -1,5 +1,4 @@
 <?php
-require $_SERVER['DOCUMENT_ROOT'].'/dbconfig.php';
 return array (
   'utf_mode' => 
   array (
@@ -43,12 +42,12 @@ return array (
     'value' => 
     array (
       'default' => 
-    	array (
+      array (
         'className' => '\\Bitrix\\Main\\DB\\MysqlConnection',
-        'host' => $DB_CFG_HOST,
-        'database' => $DB_CFG_NAME,
-        'login' => $DB_CFG_USER,
-        'password' => $DB_CFG_PASS,
+        'host' => 'localhost',
+        'database' => 'bkzavod',
+        'login' => 'bkzavod',
+        'password' => 'rEc5bu9m',
         'options' => 2,
       ),
     ),

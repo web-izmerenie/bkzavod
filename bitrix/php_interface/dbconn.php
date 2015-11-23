@@ -2,10 +2,10 @@
 define("DBPersistent", false);
 require $_SERVER['DOCUMENT_ROOT'].'/dbconfig.php';
 $DBType = "mysql";
-$DBHost = $DB_CFG_HOST;
-$DBLogin = $DB_CFG_USER;
-$DBPassword = $DB_CFG_PASS;
-$DBName = $DB_CFG_NAME;
+$DBHost = "localhost";
+$DBLogin = "bkzavod";
+$DBPassword = "rEc5bu9m";
+$DBName = "bkzavod";
 $DBDebug = false;
 $DBDebugToFile = false;
 

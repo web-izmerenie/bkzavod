@@ -137,12 +137,13 @@
 }
 .catalog .catalog-item .cell {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
 }
 .catalog .catalog-item #main-title {
   padding-right: 5px;
   padding-top: 19px;
   position: relative;
+  width: 350px;
 }
 .catalog .catalog-item #main-title h1 {
   font: 400 53px Tahoma !important;
@@ -1401,12 +1402,13 @@ html body .footer-inside {
 }
 .catalog .catalog-item .cell {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
 }
 .catalog .catalog-item #main-title {
   padding-right: 5px;
   padding-top: 19px;
   position: relative;
+  width: 350px;
 }
 .catalog .catalog-item #main-title h1 {
   font: 400 53px Tahoma !important;
