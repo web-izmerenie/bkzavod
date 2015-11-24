@@ -1,17 +1,18 @@
 'use strict'
-var gulp = require('gulp');
-var concat = require('gulp-concat');
-var rename = require("gulp-rename");
-var less = require("gulp-less");
-var autoprefixer = require('gulp-autoprefixer');
-var clean = require('gulp-clean');
 
-gulp.task('clean', function () {
-  return gulp.src('bitrix/templates/main/styles/build/*', {read: false})
-    .pipe(clean());
+var gulp         = require('gulp');
+var concat       = require('gulp-concat');
+var rename       = require("gulp-rename");
+var less         = require("gulp-less");
+var autoprefixer = require('gulp-autoprefixer');
+var del          = require('del');
+
+gulp.task('clean-styles', function (cb) {
+	del('bitrix/templates/main/styles/build/')
+		.then(cb.bind(null, null), cb.bind(null));
 });
 
-gulp.task('styles', ['clean'], function () {
+gulp.task('styles', ['clean-styles'], function () {
 	gulp.src('bitrix/templates/main/styles/src/**/*.less')
 		.pipe(less())
 		.pipe(concat('common.css'))
@@ -20,8 +21,10 @@ gulp.task('styles', ['clean'], function () {
 		.pipe(gulp.dest('bitrix/templates/main/styles/build/'));
 });
 
-gulp.task('watch', function(){
+gulp.task('watch', function () {
 	gulp.watch('bitrix/templates/main/styles/src/**/*', ['styles']);
 });
+
+gulp.task('clean', ['clean-styles']);
 
 gulp.task('default', ['styles']);
