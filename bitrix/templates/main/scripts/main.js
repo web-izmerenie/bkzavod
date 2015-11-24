@@ -1,10 +1,11 @@
-$(document).ready(function(){
+$(function () {
 	
 	var header = $('header .main');
 	var active = $('.active');
 	
-	function elementColor(){
-		var atribute = $('.color').data('color');
+	function elementColor() {
+		
+		var atribute  = $('.color').data('color');
 		var otherItem = $('.other-item');
 		
 		header.css('background', atribute);
@@ -12,13 +13,14 @@ $(document).ready(function(){
 		otherItem.css('background', atribute);
 	}
 	
-	function read(){
-		var link = $('.catalog .text a');
-		var target = $('.catalog .text span');
-		var fade =  $('.catalog .text .fadeout');
+	function read() {
 		
-		link.click(function(e){
-			if($(this).attr('href') == '#add'){
+		var link   = $('.catalog .text a');
+		var target = $('.catalog .text span');
+		var fade   = $('.catalog .text .fadeout');
+		
+		link.click(function (e) {
+			if($(this).attr('href') === '#add'){
 				e.preventDefault();
 				target.css('height', '100%').hide();
 				target.slideDown(500);
@@ -35,38 +37,39 @@ $(document).ready(function(){
 		});
 	}
 	
-	function YandexMap(placemarkPath){
-
-		ymaps.ready(init);
-		var map;
-
-		function init(){
-			map = new ymaps.Map("map", {
-				center: [47.2982,39.9112],
+	function YandexMap(placemarkPath) {
+		ymaps.ready(function () {
+			
+			var map = new ymaps.Map('map', {
+				center: [47.2982, 39.9112],
 				zoom: 16,
-				controls: ["smallMapDefaultSet", "typeSelector"]
+				controls: ['smallMapDefaultSet', 'typeSelector']
 			});
-
-			myPlacemark = new ymaps.Placemark([47.2973,39.9100],
-											{ content: 'Аксайский Кирпичный Завод',
-												balloonContent: '346710, Россия, Ростовская область, Аксайский район, хутор Большой Лог, ул. Калинина, 68'},
-											{
-													iconLayout: 'default#image',
-													iconImageHref: placemarkPath,
-													iconImageSize: [47, 68],
-													iconImageOffset: [-21, -65]
-												});
-
+			
+			myPlacemark = new ymaps.Placemark(
+				[47.2973, 39.9100],
+				{
+					content        : 'Аксайский Кирпичный Завод',
+					balloonContent : '346710, Россия, Ростовская область, Аксайский район, хутор Большой Лог, ул. Калинина, 68'
+				},
+				{
+					iconLayout      : 'default#image',
+					iconImageHref   : placemarkPath,
+					iconImageSize   : [47, 68],
+					iconImageOffset : [-21, -65]
+				}
+			);
+			
 			map.geoObjects.add(myPlacemark);
-			map.behaviors.disable("scrollZoom");
-		}
+			map.behaviors.disable('scrollZoom');
+		});
 	}
 	
 	//init function
 	elementColor();
 	read();
 	YandexMap('/bitrix/templates/main/images/pointer.png');
-
+	
 	//init plugins
 	$('.main-slider').slick({
 		dots: true,
@@ -77,19 +80,19 @@ $(document).ready(function(){
 		arrows: false,
 		autoplay: true,
 	});
-
+	
 	$('.svg').inlineSVG({
-	  eachAfter: function () {
-        $(this).find('path').removeAttr('fill');
-      }
+		eachAfter: function () {
+			$(this).find('path').removeAttr('fill');
+		}
 	});
 	
-	$(".module").fancybox({
-		padding : 0,
-			helpers: {
-				overlay: {
-					locked: false
-				}
+	$('.module').fancybox({
+		padding: 0,
+		helpers: {
+			overlay: {
+				locked: false
 			}
+		}
 	});
 });
